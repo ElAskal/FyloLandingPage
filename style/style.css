@@ -1,0 +1,186 @@
+html {
+   background-color: #1C2230;
+    text-align: center;
+    background-color: hsl(218, 28%, 13%);
+    color: hsl(0, 0%, 100%);
+    font-family: "Open sans", serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+html > * {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+header, nav * {
+    display: inline-flex;*
+}
+
+header {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-height: 54px;
+    background-color: hsl(217, 28%, 15%);
+}
+
+nav ul li {
+    margin: 0px 15px;
+}
+
+body  {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px;
+}
+
+body > div {
+    display: flex;
+}
+
+#getStarted {
+    background-color: hsl(217, 28%, 15%);
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+#getStarted > * {
+    margin: auto;
+    width: 50%;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', serif;
+    font-weight: 700;
+}
+
+h5, h6 {
+    font-weight: 400;
+    margin: 0px;
+}
+
+#advantagesList {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 20%;
+    
+}
+
+#advantagesList > * {
+    max-width: 40%;
+}
+
+#stayProductive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+}
+
+#stayProductive > *{
+    width: 50%;
+}
+
+#stayProductiveDesc {
+    text-align: left;
+    margin: auto;
+}
+
+#reviewsList {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 10%;
+}
+
+.review {
+    width: 30%;
+    padding: 10px;
+    text-align: left;
+    background-color: hsl(219, 30%, 18%);
+    border-radius: 10px;
+    box-shadow: 10px 10px #1C202C;
+}
+
+
+.reviewAuthor {
+    display: flex;
+    height: 25px;
+}
+
+.reviewAuthor img {
+    border-radius: 25px;
+}
+
+.reviewAuthorDesc {
+    display: flex;
+    flex-direction: column;
+}
+
+#earlyAccess {
+    width: 100%;
+    flex-direction: column;
+    background: linear-gradient(hsl(218, 28%, 13%), hsl(218, 28%, 13%)) top,
+                linear-gradient(hsl(216, 53%, 9%), hsl(216, 53%, 9%)) bottom;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+#earlyAccessContent {
+    margin: auto;
+    width: 50%;
+    background-color:hsl(217, 28%, 15%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+footer {
+    width: 100%;
+    text-align: left;
+    flex-wrap: wrap;
+    background-color: hsl(216, 53%, 9%);
+}
+
+footer > img {
+    margin-left: 10%;
+}
+
+#footerMain {
+    display: flex;
+    justify-content: center;
+}
+
+#footerMain span {
+    display: flex;
+    width: 15%;
+}
+
+#footerMain #address {
+    width: 25%;
+}
+
+#footerMain ul {
+    list-style: none;
+}
+
+#socialMedia {
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+#socialMedia i {
+}
+
+footer > p {
+    text-align: center;
+}
