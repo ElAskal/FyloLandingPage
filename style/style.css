@@ -6,6 +6,16 @@ html {
     font-family: "Open sans", serif;
     font-weight: 400;
     font-size: 14px;
+    line-height: 24px;
+    text-wrap: pretty;
+}
+
+a {
+    
+    color: hsl(0, 0%, 100%);
+    font-family: "Open sans", serif;
+    font-weight: 400;
+    text-decoration: none;
 }
 
 html > * {
@@ -15,15 +25,16 @@ html > * {
 }
 
 header, nav * {
-    display: inline-flex;*
+    display: inline-flex;
 }
 
 header {
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 80px;
+    padding-bottom: 45px;
     max-height: 54px;
     background-color: hsl(217, 28%, 15%);
 }
@@ -41,12 +52,18 @@ body  {
 
 body > div {
     display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 #getStarted {
     background-color: hsl(217, 28%, 15%);
     flex-direction: column;
     width: 100%;
+    height: 1076px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    align-items: center;
     background-image: url(../images/bg-curvy-desktop.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -54,13 +71,30 @@ body > div {
 }
 
 #getStarted > * {
-    margin: auto;
-    width: 50%;
+    width: 720px;
+    margin-bottom: 15px;
+}
+
+#getStarted > h4 {
+    width: 600px;
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+#getStartedButton {
+    margin-top: 15px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 280px;
+    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    border-radius: 30px;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Raleway', serif;
     font-weight: 700;
+    text-decoration: none;
 }
 
 h5, h6 {
@@ -68,48 +102,104 @@ h5, h6 {
     margin: 0px;
 }
 
+h1 {
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 60px;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0px;
+}
+
+h5 {
+    font-size: 10px;
+    line-height: 16px;
+}
+
+h6 {
+    font-size: 6px;
+    line-height: 12px;
+    opacity: 75%;
+}
+
 #advantagesList {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 20%;
-    
+    margin: 0 19%;
+    padding-top: 0px;
 }
 
-#advantagesList > * {
-    max-width: 40%;
+.advantageItem img {
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+.advantageItem {
+    max-width: 42%;
+    margin-bottom: 80px;
+    text-wrap: wrap;
 }
 
 #stayProductive {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 90%;
+    justify-content: space-between;
+    width: 84%;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin-bottom: 100px;
 }
 
-#stayProductive > *{
+#stayProductive > img {
     width: 50%;
 }
 
 #stayProductiveDesc {
+    width: 40%;
     text-align: left;
     margin: auto;
 }
 
+#linkContainer {
+    line-height: 30px;
+    border-bottom: 1px solid;
+    color: hsl(176, 68%, 64%);
+    display: inline-block;
+}
+
+#linkContainer img {
+    position: relative;
+    left: 2px;
+    top: 3px;
+    height: 14px;
+}
+
 #reviewsList {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 10%;
+    margin-left: 9%;
+    margin-right: 9%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 35px;
+    background-image: url(../images/bg-quotes.png);
+    background-repeat: no-repeat;
 }
 
 .review {
-    width: 30%;
-    padding: 10px;
+    max-height: 200px;
+    width: 27%;
+    margin: 0px;
+    padding: 2%;
     text-align: left;
     background-color: hsl(219, 30%, 18%);
-    border-radius: 10px;
-    box-shadow: 10px 10px #1C202C;
+    border-radius: 5px;
+    box-shadow: 5px 5px #1C202C;
 }
 
 
@@ -125,9 +215,11 @@ h5, h6 {
 .reviewAuthorDesc {
     display: flex;
     flex-direction: column;
+    margin-left: 8px;
 }
 
 #earlyAccess {
+    margin-top: 120px;
     width: 100%;
     flex-direction: column;
     background: linear-gradient(hsl(218, 28%, 13%), hsl(218, 28%, 13%)) top,
@@ -138,21 +230,81 @@ h5, h6 {
 
 #earlyAccessContent {
     margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    height: 220px;
     width: 50%;
     background-color:hsl(217, 28%, 15%);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px rgb(6,16,28,0.25);
 }
 
-footer {
-    width: 100%;
+#earlyAccessContent p {
+    width: 86%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    border-radius: 24px;
+    border: 0px;
+}
+
+input[type=email] {
+    width: 67%;
+}
+
+input::oninvalid {
+    line-height: 500px;
+}
+
+input[type=submit] {
+    width: 27%;
+    height: 48px;
+    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input::placeholder {
+    padding-left: 40px;
+    opacity: 50%;
+}
+
+#errorMsg {
+    text-align: center;
+    color: hsl(0, 100%, 63%);
+    font-size: 10px;
+    line-height: 30px;
+    margin: 0px;
+    padding:0px;
     text-align: left;
-    flex-wrap: wrap;
+    margin-left: 40px;
+    visibility: hidden;
+}
+footer {
+    width: 85%;
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-top: 40px;
+    text-align: left;
+    text-wrap: balance;
     background-color: hsl(216, 53%, 9%);
 }
 
-footer > img {
-    margin-left: 10%;
+#logo {
 }
 
 #footerMain {
@@ -162,15 +314,51 @@ footer > img {
 
 #footerMain span {
     display: flex;
-    width: 15%;
+    justify-content: space-around;
 }
 
-#footerMain #address {
-    width: 25%;
+#address {
+    width: 30%;
+}
+
+#contactInfo {
+    width: 20%;
+}
+
+#about {
+    width: 20%;
+}
+
+#legal {
+    width: 20%;
+}
+
+#socialMedia {
+    width: 12%;
 }
 
 #footerMain ul {
     list-style: none;
+    padding: 0px;
+}
+
+#footerMain ul li {
+    margin-bottom: 15px;
+}
+
+#position {
+   background : url(../images/icon-location.svg) no-repeat left 5px;
+   padding-left: 30px;
+}
+
+#phone {
+   background : url(../images/icon-phone.svg) no-repeat left 5px;
+   padding-left: 30px;
+}
+
+#mail {
+   background : url(../images/icon-email.svg) no-repeat left 5px;
+   padding-left: 30px;
 }
 
 #socialMedia {
@@ -183,4 +371,13 @@ footer > img {
 
 footer > p {
     text-align: center;
+}
+
+.fa {
+    border: 1px solid;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
