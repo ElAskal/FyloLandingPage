@@ -18,6 +18,14 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    font-weight: 700;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 html > * {
     text-align: center;
     align-content: center;
@@ -39,11 +47,23 @@ header {
     background-color: hsl(217, 28%, 15%);
 }
 
-nav ul li {
-    margin: 0px 15px;
+nav {
+    width: 20%;
 }
 
-body  {
+nav ul {
+    width: 100%;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+nav li {
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -91,6 +111,10 @@ body > div {
     border-radius: 30px;
 }
 
+#getStartedButton:hover {
+    background: hsl(176, 68%, 64%);
+}
+
 h1, h2, h3, h4 {
     font-family: 'Raleway', serif;
     font-weight: 700;
@@ -116,12 +140,13 @@ h4 {
 }
 
 h5 {
+    font-weight: 700;
     font-size: 10px;
     line-height: 16px;
 }
 
 h6 {
-    font-size: 6px;
+    font-size: 8px;
     line-height: 12px;
     opacity: 75%;
 }
@@ -140,7 +165,7 @@ h6 {
 }
 
 .advantageItem {
-    max-width: 42%;
+    width: 42%;
     margin-bottom: 80px;
     text-wrap: wrap;
 }
@@ -171,11 +196,22 @@ h6 {
     display: inline-block;
 }
 
-#linkContainer img {
+#arrow {
     position: relative;
     left: 2px;
-    top: 3px;
+    top: 2px;
     height: 14px;
+    width: 14px;
+}
+
+
+#linkContainer:hover {
+    color: white;
+    font-weight: 400;
+}
+
+#linkContainer:hover svg circle {
+    fill: white;
 }
 
 #reviewsList {
@@ -261,12 +297,14 @@ input {
     border: 0px;
 }
 
-input[type=email] {
-    width: 67%;
+#formField {
+    width: 62%;
 }
 
-input::oninvalid {
-    line-height: 500px;
+input[type=email] {
+    width: 100%;
+    height: 48px;
+    padding-left: 40px;
 }
 
 input[type=submit] {
@@ -278,8 +316,12 @@ input[type=submit] {
     font-size: 14px;
 }
 
+input[type=submit]:hover {
+    background: hsl(176, 68%, 64%);
+    cursor: pointer;
+}
+
 input::placeholder {
-    padding-left: 40px;
     opacity: 50%;
 }
 
@@ -309,12 +351,11 @@ footer {
 
 #footerMain {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-#footerMain span {
+#footerMain div {
     display: flex;
-    justify-content: space-around;
 }
 
 #address {
@@ -326,15 +367,11 @@ footer {
 }
 
 #about {
-    width: 20%;
+    width: 7%;
 }
 
 #legal {
-    width: 20%;
-}
-
-#socialMedia {
-    width: 12%;
+    width: 8%;
 }
 
 #footerMain ul {
@@ -348,25 +385,23 @@ footer {
 
 #position {
    background : url(../images/icon-location.svg) no-repeat left 5px;
-   padding-left: 30px;
+   padding-left: 50px;
 }
 
 #phone {
    background : url(../images/icon-phone.svg) no-repeat left 5px;
-   padding-left: 30px;
+   padding-left: 50px;
 }
 
 #mail {
    background : url(../images/icon-email.svg) no-repeat left 5px;
-   padding-left: 30px;
+   padding-left: 50px;
 }
 
 #socialMedia {
+    width: 10%;
     display: inline-flex;
-    justify-content: space-around;
-}
-
-#socialMedia i {
+    justify-content: center;
 }
 
 footer > p {
@@ -380,4 +415,224 @@ footer > p {
     height: 30px;
     text-align: center;
     line-height: 30px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 10px; 
+}
+
+.fa:hover {
+    color: hsl(176, 68%, 64%);
+}
+
+@media(max-width:750px) {
+    
+    html {
+        line-height: 20px;
+    }
+    
+    header {
+        padding-top: 25px ;
+        height: 25px;
+        justify-content: space-between;
+    }
+    
+    header img {
+        width: 80px;
+        height: 25px;
+    }
+    
+    nav {
+        width: 50%;
+        font-size: 12px;
+    }
+    
+    nav ul {
+        margin-top: 0px;
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 25px;
+        line-height: 50px;
+    }
+    
+    h4 {
+        width: 100%;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    #getStarted {
+        width: 85%;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+        background-image: url('../images/bg-curvy-mobile.svg'), linear-gradient(hsl(218, 28%, 13%),hsl(218, 28%, 13%)) ;
+        background-position: 100% 40%, bottom;
+        background-repeat: no-repeat;
+        background-size: 100% 20%, 100% 48%;
+        height: auto;
+        margin-bottom: 90px;
+    }
+    
+    #getStarted > * {
+        width: 100%;
+    }
+    
+    #getStarted h4 {
+        width: 99%;
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    
+    #advantagesList {
+        flex-direction: column;
+        width: 85%;
+        margin: 0px;
+        margin-bottom: 40px;
+    }
+
+    .advantageItem img {
+        height: 60px;
+        margin-bottom: 30px;
+    }
+
+    .advantageItem {
+        width: 100%;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    #stayProductive {
+        flex-direction: column;
+    }
+    
+    #stayProductive h1, #earlyAccess h1 {
+        font-size: 18px;
+        line-height: 25px
+    }
+    
+    #stayProductive img, #stayProductiveDesc {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    #reviewsList {
+        flex-direction: column;
+        width: 75%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+        padding: 0;
+        padding-top: 10px;
+        font-size: 10px;
+        line-height: 20px;
+        background-size: auto 22px;
+        background-position: 2% 0;;
+    }
+    
+    .review {
+        text-wrap: wrap;
+        width: 84%;
+        padding-left: 8%;
+        padding-right: 8%;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        margin: auto;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+    
+    #earlyAccess {
+        width: 90%;
+        height: 350px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    #earlyAccessContent {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        
+    }
+    
+    
+    footer, #footerMain {
+        flex-direction: column;
+    }
+    
+    footer {
+        width: 75%;
+        padding-left: 8%;
+        padding-right: 17%;
+        text-wrap: wrap;
+    }
+    
+    #footerMain {
+        width: 100%;
+        margin-top: 45px;
+    }
+    
+    #footerMain > * {
+        width: 100%;
+    }
+    
+    form {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    input[type=email], input[type=submit] {
+        height: 50px;
+        border-radius: 25px;
+        margin: auto;
+        margin-bottom: 24px;
+    }
+    
+    #formField {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    #errorMsg {
+        line-height: 24px;
+        padding: 0p;
+    }
+    
+    input[type=email] {
+        width: 75%;
+        padding-left: 10%;
+        margin-bottom: 0px;
+    }
+    
+    input[type=submit] {
+        width: 85%;
+    }
+    
+    #position, #phone, #mail {
+        padding-left: 40px;
+    }
+    
+    #footerMain ul {
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    #contactInfo ul li {
+        margin-bottom: 15px;
+    }
+    
+    #about, #legal {
+        margin-top: 45px;
+    }
+    
+    #socialMedia {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        
+    }
 }
